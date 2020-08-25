@@ -1,0 +1,74 @@
+
+.App{
+  background: #0F2027;
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+.container{
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-gap:20px;
+  margin:10px;
+}
+.card{
+  height:550px;
+}
+.card img{
+  height:250px;
+}
+.card-title{
+  font-family: 'Abril Fatface';
+  font-weight:999;
+}
+.recipeDetails{
+  height:200px;
+  overflow:scroll;
+  overflow-x: hidden;
+}
+.recipeDetails li{
+  font-weight:bold;
+}
+.form{
+  display:flex;
+  justify-content:center;
+}
+.logo img{
+  width:50px;
+  margin:10px;
+}
+.App form{
+  background-color: darkorange;
+  width:100%;
+}
+.form input{
+  margin:10px 10px;
+  padding:15px;
+  width:500px;
+  border-radius:5px;
+  outline:none;
+  border:none;
+  background-color:#e3e3e3;
+}
+.form form input:focus{
+  background-color:white;
+}
+.form button{
+  background-color:white;
+  outline:none;
+  border:none;
+  padding:10px;
+  margin:10px 10px;
+  border-radius: 5px;
+  width:100px;
+  color:black;
+  font-weight:999;
+}
+.form button:hover{
+  cursor: pointer;
+  background-color:black;
+  color:white;
+  transition: ease-in 0.2s;
+}
+.recipeNumber{
+  display:none;
+}
