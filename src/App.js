@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Recpie from './Recpie';
 // import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const app_id = "4cbcc66c"
@@ -30,11 +29,11 @@ const App = () => {
     query('')
   }
   return (
-
     <div className="App">
       <form className="form" onSubmit={stopSubmit}>
         <div className="logo">
-          <img src="recipe.jpg" alt=""></img>
+          <img src="recipe.jpg" alt="">
+          </img>
         </div>
         <input className="inputField" type="text" name="recipe" value={searchQuery} placeholder="Search Food Recipe" onChange={onSearch}></input>
         <button classsName="submitButton" type="submit" value="Search">Search</button>
