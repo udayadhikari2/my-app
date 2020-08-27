@@ -8,11 +8,11 @@ const App = () => {
   const app_key = "2d23f715391e93d40d78a3fb5377e030"
   const [recpie, setRecpie] = useState([]);
   const [searchQuery, query] = useState("");
-  const [getQuery, setQuery] = useState('momo');
+  const [getQuery, setQuery] = useState('Mango');
 
   useEffect(() => {
     searchRecpie();
-  },[getQuery]);
+  }, [getQuery]);
   const searchRecpie = async () => {
     const response = await fetch(`https://api.edamam.com/search?q=${getQuery}&app_id=${app_id}&app_key=${app_key}`)
     const data = await response.json();
@@ -28,7 +28,7 @@ const App = () => {
     setQuery(searchQuery);
     query('')
   }
-  const reload=()=>{
+  const reload = () => {
     window.location.reload();
   }
   return (
@@ -41,7 +41,8 @@ const App = () => {
         <button classsName="submitButton" type="submit" value="Search">Search</button>
       </form>
       <div className="container w-100">
-        {recpie.map((recpies,index) => (
+        {/* <div class="spinner-border"></div> */}
+        {recpie.map((recpies, index) => (
           <Recpie
             key={recpies.recipe}
             ids={index}

@@ -11,6 +11,7 @@
   margin:10px;
 }
 .card{
+  overflow-x: hidden;
   box-shadow:
   0 2.8px 2.2px rgba(248, 146, 146, 0.034),
   0 6.7px 5.3px rgba(185, 104, 104, 0.048),
@@ -35,6 +36,9 @@
   overflow-x: hidden;
 }
 .recipeDetails li{
+  font-weight:bold;
+}
+.recipeList{
   font-weight:bold;
 }
 .form{
@@ -81,6 +85,6 @@
   color:white;
   transition: ease-in 0.2s;
 }
-.recipeNumber{
+/* .recipeNumber{
   display:none;
-}
+} */
