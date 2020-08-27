@@ -8,7 +8,7 @@ const App = () => {
   const app_key = "2d23f715391e93d40d78a3fb5377e030"
   const [recpie, setRecpie] = useState([]);
   const [searchQuery, query] = useState("");
-  const [getQuery, setQuery] = useState('');
+  const [getQuery, setQuery] = useState('momo');
 
   useEffect(() => {
     searchRecpie();
