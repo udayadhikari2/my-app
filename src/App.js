@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     searchRecpie();
-  }, [getQuery]);
+  },[getQuery]);
   const searchRecpie = async () => {
     const response = await fetch(`https://api.edamam.com/search?q=${getQuery}&app_id=${app_id}&app_key=${app_key}`)
     const data = await response.json();
@@ -29,11 +29,14 @@ const App = () => {
     setQuery(searchQuery);
     query('')
   }
+  const reload=()=>{
+    window.location.reload();
+  }
   return (
 
     <div className="App">
       <form className="form" onSubmit={stopSubmit}>
-        <div className="logo">
+        <div className="logo" title="Reload" onClick={reload}>
           <img src="recipe.jpg" alt=""></img>
         </div>
         <input className="inputField" type="text" name="recipe" value={searchQuery} placeholder="Search Food Recipe" onChange={onSearch}></input>
@@ -46,7 +49,7 @@ const App = () => {
             ids={index}
             title={recpies.recipe.label}
             calories={recpies.recipe.calories}
-            image={recpies.recipe.image}
+            images={recpies.recipe.image}
             ingredients={recpies.recipe.ingredients}
           />
         ))}

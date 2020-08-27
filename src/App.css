@@ -11,18 +11,27 @@
   margin:10px;
 }
 .card{
-  height:550px;
+  box-shadow:
+  0 2.8px 2.2px rgba(248, 146, 146, 0.034),
+  0 6.7px 5.3px rgba(185, 104, 104, 0.048),
+  0 12.5px 10px rgba(105, 58, 58, 0.06),
+  0 22.3px 17.9px rgba(43, 20, 20, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
 }
 .card img{
-  height:250px;
+  height:300px;
 }
 .card-title{
   font-family: 'Abril Fatface';
   font-weight:999;
+  cursor: pointer;
+  text-align: center;
+}
+.card-title:hover{
+  color:red;
 }
 .recipeDetails{
-  height:200px;
-  overflow:scroll;
   overflow-x: hidden;
 }
 .recipeDetails li{
@@ -31,6 +40,9 @@
 .form{
   display:flex;
   justify-content:center;
+}
+.logo:hover{
+  cursor: pointer;
 }
 .logo img{
   width:50px;
