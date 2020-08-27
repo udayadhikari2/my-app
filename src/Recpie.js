@@ -13,11 +13,12 @@ const Recpie = ({ title, images, ingredients, ids }) => {
     }
     return (
         <div className="card m-2 w-100">
-            <img className="card-img-top" src={images} alt="Card cap" />
-            <div className="card-body">
-                <h5 className="card-title" title="Click For Recipe" id={ids} onClick={e => showRecipe(e.target.id)}>{title}</h5>
-                <div className={"recipeDetails"}>
-                    <ol className="recipeNumber" id={"list" + ids} >
+            <img className="card-img-top" src={images} alt="Card image cap"></img>
+                <div className="card-body">
+                    <h5 className="card-title">{title}</h5>
+                    <div className="btn btn-danger w-100" id={ids} onClick={e=>showRecipe(e.target.id)}>{title} Recipe</div>                   
+                    <div className={"recipeDetails"}>
+                        <ol className="recipeNumber"  id={"list"+ ids} >
                         {ingredients.map(ingredient => (
                             <li className="recipeList">
                                 {ingredient.text}

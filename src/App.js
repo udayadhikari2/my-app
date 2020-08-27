@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Recpie from './Recpie';
 // import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const app_id = "4cbcc66c"
   const app_key = "2d23f715391e93d40d78a3fb5377e030"
   const [recpie, setRecpie] = useState([]);
   const [searchQuery, query] = useState("");
-  const [getQuery, setQuery] = useState('momo');
+  const [getQuery, setQuery] = useState('');
 
   useEffect(() => {
     searchRecpie();
@@ -33,7 +32,6 @@ const App = () => {
     window.location.reload();
   }
   return (
-
     <div className="App">
       <form className="form" onSubmit={stopSubmit}>
         <div className="logo" title="Reload" onClick={reload}>
